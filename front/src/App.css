@@ -1,0 +1,212 @@
+#root {
+  /* max-width: 1280px; */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.app-container {
+  /* max-width: 800px; */
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 2rem;
+  font-family: sans-serif;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.add-new-button,
+.book-actions button,
+.form-actions button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.add-new-button {
+  background-color: #007bff;
+  color: white;
+}
+
+.add-new-button:hover {
+  background-color: #0056b3;
+}
+
+/* BookList Styles */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Media query for large screens (e.g., wider than 1200px) */
+@media (min-width: 1200px) {
+  .book-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.book-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-item h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.book-item p {
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.book-item p strong {
+  color: #333;
+}
+
+.book-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.book-actions button {
+  background-color: #6c757d;
+  color: white;
+}
+
+.book-actions button.delete {
+  background-color: #dc3545;
+}
+
+.book-actions button:hover {
+  opacity: 0.8;
+}
+
+/* BookForm Styles */
+.book-form {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-form h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #333;
+}
+
+.book-form div {
+  margin-bottom: 1rem;
+}
+
+.book-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #495057;
+}
+
+.book-form input[type="text"],
+.book-form input[type="number"],
+.book-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.book-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.form-actions button {
+  background-color: #28a745;
+  color: white;
+}
+
+.form-actions button.cancel {
+  background-color: #ffc107;
+  color: #212529;
+}
+
+.form-actions button:hover {
+  opacity: 0.9;
+}

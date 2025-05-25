@@ -1,0 +1,215 @@
+openapi: 3.0.0
+info:
+  title: API de Biblioteca
+  version: 1.0.0
+  description: Una API para gestionar una colección de libros.
+paths:
+  /books:
+    get:
+      summary: Listar todos los libros
+      tags:
+        - Books
+      responses:
+        "200":
+          description: Una lista de libros.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Book"
+        "500":
+          description: Error del servidor al obtener libros.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    post:
+      summary: Crear un nuevo libro
+      tags:
+        - Books
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BookInput"
+      responses:
+        "201":
+          description: Libro creado exitosamente.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Book"
+        "500":
+          description: Error del servidor al agregar el libro.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+  /books/{id}:
+    get:
+      summary: Obtener un libro por su ID
+      tags:
+        - Books
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del libro a obtener.
+          schema:
+            type: string
+            format: uuid
+      responses:
+        "200":
+          description: Libro encontrado.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Book"
+        "404":
+          description: Libro no encontrado.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Error del servidor al obtener el libro.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    put:
+      summary: Actualizar un libro existente
+      tags:
+        - Books
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del libro a actualizar.
+          schema:
+            type: string
+            format: uuid
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BookInput"
+      responses:
+        "200":
+          description: Libro actualizado exitosamente.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Book"
+        "404":
+          description: Libro no encontrado para actualizar.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Error del servidor al actualizar el libro.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+    delete:
+      summary: Eliminar un libro
+      tags:
+        - Books
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ID del libro a eliminar.
+          schema:
+            type: string
+            format: uuid
+      responses:
+        "204":
+          description: Libro eliminado exitosamente.
+        "404":
+          description: Libro no encontrado para eliminar.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+        "500":
+          description: Error del servidor al eliminar el libro.
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Error"
+components:
+  schemas:
+    Book:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+          example: "d290f1ee-6c54-4b01-90e6-d701748f0851"
+        title:
+          type: string
+          example: "Cien años de soledad"
+        author:
+          type: string
+          example: "Gabriel García Márquez"
+        description:
+          type: string
+          example: "La historia de la familia Buendía en el mítico pueblo de Macondo."
+        pages:
+          type: integer
+          format: int32
+          example: 417
+        year_published:
+          type: integer
+          format: int32
+          example: 1967
+        publisher:
+          type: string
+          example: "Editorial Sudamericana"
+      required:
+        - id
+        - title
+        - author
+    BookInput:
+      type: object
+      properties:
+        title:
+          type: string
+          example: "Nuevo Libro"
+        author:
+          type: string
+          example: "Autor Ejemplo"
+        description:
+          type: string
+          example: "Una descripción detallada del libro."
+        pages:
+          type: integer
+          format: int32
+          example: 250
+        year_published:
+          type: integer
+          format: int32
+          example: 2024
+        publisher:
+          type: string
+          example: "Editorial Moderna"
+      required: # Campos mínimos para crear un libro
+        - title
+        - author
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+          example: "Mensaje de error detallado."
+      required:
+        - message
+tags:
+  - name: Books
+    description: Operaciones relacionadas sobre la librería.

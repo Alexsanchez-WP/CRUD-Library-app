@@ -1,6 +1,7 @@
 export type Book = {
   id: number;
   title: string;
+  author: string;
   description: string;
   pages: number;
   year_published: number;
@@ -9,6 +10,7 @@ export type Book = {
 
 export type BookForm = {
   title: string;
+  author: string;
   description: string;
   pages: number;
   year_published: number;
