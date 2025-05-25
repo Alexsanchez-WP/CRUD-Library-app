@@ -1,0 +1,164 @@
+{
+    "books": [
+        {
+            "id": 1,
+            "title": "Cien años de soledad",
+            "description": "La historia de la familia Buendía en el mítico pueblo de Macondo.",
+            "pages": 417,
+            "year_published": 1967,
+            "publisher": "Editorial Sudamericana"
+        },
+        {
+            "id": 2,
+            "title": "Rayuela",
+            "description": "Una novela experimental sobre la vida y el amor en París y Buenos Aires.",
+            "pages": 564,
+            "year_published": 1963,
+            "publisher": "Editorial Sudamericana"
+        },
+        {
+            "id": 3,
+            "title": "Pedro Páramo",
+            "description": "Un hombre viaja a Comala en busca de su padre y descubre un pueblo de fantasmas.",
+            "pages": 124,
+            "year_published": 1955,
+            "publisher": "Fondo de Cultura Económica"
+        },
+        {
+            "id": 4,
+            "title": "La casa de los espíritus",
+            "description": "Saga familiar marcada por la política y lo sobrenatural en Chile.",
+            "pages": 448,
+            "year_published": 1982,
+            "publisher": "Plaza & Janés"
+        },
+        {
+            "id": 5,
+            "title": "El túnel",
+            "description": "Un pintor obsesionado narra su descenso a la locura.",
+            "pages": 160,
+            "year_published": 1948,
+            "publisher": "Editorial Losada"
+        },
+        {
+            "id": 6,
+            "title": "Fervor de Buenos Aires",
+            "description": "Colección de poemas sobre la ciudad de Buenos Aires.",
+            "pages": 80,
+            "year_published": 1923,
+            "publisher": "Imprenta Serantes"
+        },
+        {
+            "id": 7,
+            "title": "La sombra del viento",
+            "description": "Un joven descubre un libro maldito en la Barcelona de posguerra.",
+            "pages": 565,
+            "year_published": 2001,
+            "publisher": "Planeta"
+        },
+        {
+            "id": 8,
+            "title": "El amor en los tiempos del cólera",
+            "description": "Una historia de amor que resiste el paso de los años.",
+            "pages": 368,
+            "year_published": 1985,
+            "publisher": "Editorial Oveja Negra"
+        },
+        {
+            "id": 9,
+            "title": "Sobre héroes y tumbas",
+            "description": "Novela compleja sobre la historia y la identidad argentina.",
+            "pages": 480,
+            "year_published": 1961,
+            "publisher": "Editorial Losada"
+        },
+        {
+            "id": 10,
+            "title": "Santa Evita",
+            "description": "La historia de Eva Perón y el destino de su cadáver.",
+            "pages": 384,
+            "year_published": 1995,
+            "publisher": "Editorial Planeta"
+        },
+        {
+            "id": 11,
+            "title": "Aura",
+            "description": "Novela corta de realismo mágico ambientada en la Ciudad de México.",
+            "pages": 62,
+            "year_published": 1962,
+            "publisher": "Ediciones Era"
+        },
+        {
+            "id": 12,
+            "title": "La tregua",
+            "description": "Un hombre mayor encuentra el amor en el ocaso de su vida.",
+            "pages": 224,
+            "year_published": 1960,
+            "publisher": "Editorial Arca"
+        },
+        {
+            "id": 13,
+            "title": "Don Segundo Sombra",
+            "description": "Relato de la vida rural argentina a través de un joven huérfano.",
+            "pages": 224,
+            "year_published": 1926,
+            "publisher": "Editorial Claridad"
+        },
+        {
+            "id": 14,
+            "title": "El Aleph",
+            "description": "Colección de cuentos fantásticos y filosóficos.",
+            "pages": 146,
+            "year_published": 1949,
+            "publisher": "Editorial Losada"
+        },
+        {
+            "id": 15,
+            "title": "Los detectives salvajes",
+            "description": "Dos poetas mexicanos buscan a una misteriosa escritora desaparecida.",
+            "pages": 609,
+            "year_published": 1998,
+            "publisher": "Editorial Anagrama"
+        },
+        {
+            "id": 16,
+            "title": "La ciudad y los perros",
+            "description": "La vida de los cadetes en una escuela militar peruana.",
+            "pages": 376,
+            "year_published": 1963,
+            "publisher": "Editorial Seix Barral"
+        },
+        {
+            "id": 17,
+            "title": "El llano en llamas",
+            "description": "Cuentos sobre la vida rural y la revolución mexicana.",
+            "pages": 146,
+            "year_published": 1953,
+            "publisher": "Fondo de Cultura Económica"
+        },
+        {
+            "id": 18,
+            "title": "Como agua para chocolate",
+            "description": "Novela de realismo mágico y recetas mexicanas.",
+            "pages": 256,
+            "year_published": 1989,
+            "publisher": "Editorial Planeta"
+        },
+        {
+            "id": 19,
+            "title": "La muerte de Artemio Cruz",
+            "description": "Un hombre recuerda su vida en su lecho de muerte.",
+            "pages": 336,
+            "year_published": 1962,
+            "publisher": "Editorial Alfaguara"
+        },
+        {
+            "id": 20,
+            "title": "El coronel no tiene quien le escriba",
+            "description": "Un coronel espera una carta que nunca llega.",
+            "pages": 96,
+            "year_published": 1961,
+            "publisher": "Editorial Sudamericana"
+        }
+    ]
+}
